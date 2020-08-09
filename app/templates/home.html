@@ -238,9 +238,9 @@
                 
                 <form action="" method="POST" class="contact__form">
                     {% csrf_token %}
-                    <input type="name" placeholder="Name" class="contact__input">
-                    <input type="email" placeholder="Email" class="contact__input">
-                    <textarea name="description" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="text"  name ="name" placeholder="Name" class="contact__input">
+                    <input type="email"  name ="email" placeholder="Email" class="contact__input">
+                    <textarea name="description" name ="description"  id="" cols="0" rows="10" class="contact__input"></textarea>
                     <input type="Submit"  class="contact__button button">
                 </form>
             </div>

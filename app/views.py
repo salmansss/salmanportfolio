@@ -12,14 +12,14 @@ def home(request):
     print("submit the insert")
     # contact1 = contactform.objects.all()
     if request.method == 'POST':
-        name = request.POST.get(['name'])
-        email = request.POST.get(['email'])
-        description = request.POST.get(['description'])
+        name = request.POST['name']
+        email = request.POST['email']
+        description = request.POST['description']
 
         contactform1 = contactform(name=name,email=email,description=description)
         contactform1.save()
         print('user created')
-        return redirect('/app/')
+        return redirect('home')
 
 
     else:
