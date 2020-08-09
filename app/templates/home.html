@@ -212,23 +212,21 @@
 
             <div class="work__container bd-grid">
                 <div class="work__img">
-                    <img src="{% static 'image/work1.jpg' %}" alt="">
+                    <a href="{% url 'chatbot' %}"><img src="{% static 'image/work1.jpg' %}" alt=""></a>
                 </div>
                 <div class="work__img">
-                    <img src="{% static 'image/work2.jpg' %}" alt="">
+                    <a href="{% url 'pinggame' %}"><img src="{% static 'image/work2.jpg' %}" alt=""></a>
                 </div>
                 <div class="work__img">
-                    <img src="{% static 'image/work3.jpg' %}" alt="">
+                    <a href="{% url 'sportcenter' %}"><img src="{% static 'image/work3.jpg' %}" alt=""></a>
                 </div>
                 <div class="work__img">
-                    <img src="{% static 'image/work4.jpg' %}" alt="">
+                    <a href="{% url 'textutils' %}"><img src="{% static 'image/work4.jpg' %}" alt=""></a>
                 </div>
                 <div class="work__img">
-                    <img src="{% static 'image/work5.jpg' %}" alt="">
+                    <a href="{% url 'voting' %}"><img src="{% static 'image/work5.jpg' %}" alt=""></a>
                 </div>
-                <div class="work__img">
-                    <img src="{% static 'image/work6.jpg' %}" alt="">
-                </div>
+                
             </div>
         </section>
 
@@ -237,11 +235,13 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Enviar" class="contact__button button">
+                
+                <form action="" method="POST" class="contact__form">
+                    {% csrf_token %}
+                    <input type="name" placeholder="Name" class="contact__input">
+                    <input type="email" placeholder="Email" class="contact__input">
+                    <textarea name="description" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="Submit"  class="contact__button button">
                 </form>
             </div>
         </section>
@@ -249,12 +249,13 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">Marlon</p>
-        <div class="footer__social">
+        <p class="footer__title">Salman</p>
+        <!-- i does not id of instagram and twitter so that is why i am not importing the data  -->
+        <!-- <div class="footer__social">
             <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
             <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
             <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-        </div>
+        </div> -->
         <p>&#169; 2020 copyright all right reserved</p>
     </footer>
 
