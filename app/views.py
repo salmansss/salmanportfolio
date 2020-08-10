@@ -25,20 +25,7 @@ def home(request):
     else:
         return render(request, 'home.html')
 
-# def register(request):
-#     if request.method == 'POST':
-#         name = request.POST['name']
-#         email = request.POST['email']
-#         description = request.POST['description']
 
-#         user = contactform.objects.create_user(name=name,email=email,description=description)
-#         user.save();
-#         print('user created')
-#         return redirect('')
-
-
-#     else:
-#         return render(request, 'register.html')
 
 def voting(request):
     return render(request, 'voting.html')
